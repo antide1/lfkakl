@@ -18,7 +18,7 @@ jobs:
         id: build
         uses: geode-sdk/build-geode-mod@main
         with:
-          sdk: latest
+          sdk: given
 
       - name: Upload .geode
         uses: actions/upload-artifact@v7
