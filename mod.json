@@ -1,0 +1,87 @@
+{
+    "geode": "5.11.2",
+    "gd": {
+        "win": "2.2081"
+    },
+    "id": "clickframes.click-frames",
+    "name": "Click Frames",
+    "version": "v1.0.0",
+    "developer": "clickframes",
+    "description": "Shows how many frames every click of your run is held for: coloured counter rows in the corner and a circle on each click. Measured live, nothing is recorded or sent anywhere.",
+    "tags": [
+        "Gameplay",
+        "Interface"
+    ],
+    "settings": {
+        "enabled": {
+            "type": "bool",
+            "name": "Show click frames",
+            "default": true,
+            "description": "Master switch. When off, nothing is counted or drawn."
+        },
+        "counter-ranges": {
+            "type": "string",
+            "name": "Counter rows",
+            "default": "1,2,3,4,5-6,7-8,9-12,13-16,17+",
+            "description": "Rows shown in the corner, as frame numbers or ranges separated by commas, like 1,2,3,7-8,17+."
+        },
+        "counter-colors": {
+            "type": "string",
+            "name": "Row colours",
+            "default": "1:fe4f50,2:ffb355,3:fdfe78,4:fefefe,5:8bfe8b,7:8dc7fe,9:7877fe,13:b586fc,17:fc8bff",
+            "description": "Colour of each row and its circles. Written as first frame and hex colour, like 1:ff4c54,5:8df791. Rows without their own colour use the closest one below them."
+        },
+        "show-markers": {
+            "type": "bool",
+            "name": "Click circles",
+            "default": true,
+            "description": "Draw a coloured circle with the frame count at the place of every click."
+        },
+        "last-click": {
+            "type": "bool",
+            "name": "Last click readout",
+            "default": true,
+            "description": "Show a small line under the rows with the frame count of the newest click."
+        },
+        "hud-x": {
+            "type": "int",
+            "name": "Rows position X",
+            "default": 2,
+            "min": 0,
+            "max": 100,
+            "description": "Horizontal position of the rows as a percentage of the screen width."
+        },
+        "hud-y": {
+            "type": "int",
+            "name": "Rows position Y",
+            "default": 98,
+            "min": 0,
+            "max": 100,
+            "description": "Vertical position of the rows as a percentage of the screen height."
+        },
+        "hud-scale": {
+            "type": "float",
+            "name": "Rows scale",
+            "default": 0.6,
+            "min": 0.2,
+            "max": 3.0,
+            "description": "Size of the counter rows."
+        },
+        "marker-text-scale": {
+            "type": "float",
+            "name": "Circle text scale",
+            "default": 0.45,
+            "min": 0.1,
+            "max": 2.0,
+            "description": "Size of the frame number inside the click circles."
+        },
+        "marker-fade": {
+            "type": "float",
+            "name": "Circles disappear after",
+            "default": 0.0,
+            "min": 0.0,
+            "max": 10.0,
+            "description": "Seconds before a click circle fades out. 0 keeps the circles until you restart the level."
+        }
+    }
+}
